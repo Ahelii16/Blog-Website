@@ -1,0 +1,21 @@
+<%- include('partials/header.ejs') %>
+
+    <h1>Hello!</h1>
+    <br>
+    <% homeContent.forEach(function(element) { %>
+        <div class="item">
+            <h3><%= element.title %> </h3>
+            <p><%= element.body.substring(0,100) + "...  " %> </p>
+            <a href="/posts/<%= element._id %>">Read More</a>
+            <br>
+        </div>
+    <% }) %>
+    <!-- <% for(var i = 0; i < homeContent.length; i++ ) { %> 
+        <div class="item">
+            <p><%= homeContent[i].title %> </p>
+            <p><%= homeContent[i].body %> </p>
+            <br>
+        </div>
+    <% } %> -->
+
+<%- include('partials/footer.ejs') %>
